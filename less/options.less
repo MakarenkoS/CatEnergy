@@ -1,0 +1,34 @@
+@import "variables.less";
+
+.options {
+	padding: 0 20px;
+	margin: 0 auto;
+	
+	.options__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media(min-width: @tablet-width) {
+	.options {
+		padding: 0 30px;
+		margin-top: 550px;
+	}
+	&__list {
+		display: block;
+	}
+}
+
+@media(min-width: @desktop-width) {
+	.options {
+		max-width: 1300px;
+		padding: 0 110px;
+		margin-top: 50px;
+		&__list {
+		display: flex;
+		justify-content: space-between;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+@import "variables.less";
+
+.borders(@color: blue) {
+	border: 2px solid @color;
+}
+
+.site-list {
+	margin: 0;
+	padding: 0;
+	/*margin: 0 auto;*/
+	width: 280px;
+	list-style: none;	
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+
+	&__item {
+		margin: 0 auto;
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 	400;
+	}
+	&__item--active {
+		border-bottom: 2px solid green;
+		/*Переделвать*/
+	}
+	&__link {
+		text-decoration: none;
+	  color: #222222;
+	}
+	&__link:hover {
+		opacity: 0.6;
+	}
+	&__link:focus {
+		opacity: 0.3;
+	}
+}
+
+@media (min-width: @tablet-width) {
+	.site-list {
+		width: 516px;
+		flex-direction: row;
+		margin-top: 19px;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.site-list {
+		&__link {
+			color: #fff;
+		}
+	}
+}

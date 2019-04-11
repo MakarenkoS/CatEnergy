@@ -1,0 +1,25 @@
+.copyright {
+	position: relative;
+	&__text {
+		display: none;
+	}
+	&__link {
+		font-size: 16px;
+		line-height: 16px;
+		text-decoration: none;
+		color: #444444;
+		font-family: "Arial", sans-serif;
+	}
+	&::after {
+		position: absolute;
+		content: "";
+		right: 0;
+		top: -14px;
+		width: 27px;
+		height: 34px;
+		
+		background-image: url("../img/htmlacademy.png");
+		background-repeat: no-repeat;
+
+	};
+}

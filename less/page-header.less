@@ -1,0 +1,48 @@
+@import "variables.less";
+
+.page-header {
+	font-family: "Oswald";
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.page-header__wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.page-header__logo {
+	display: flex;
+	justify-content: space-between;
+	width: 192px;
+	flex-shrink: 0;
+	align-items: center;
+}
+
+@media(min-width: @tablet-width) {
+	.page-header {
+		flex-direction: row;
+		padding: 0 30px;
+		justify-content: space-between;
+	}
+
+	.page-header__toggle {
+		display: none;
+	}
+
+	.page-header__logo {
+		width: 203px
+	}
+}
+
+@media(min-width: @desktop-width) {
+	.page-header {
+		width: 1300px;
+		margin: 0 auto;
+		padding: 0 110px;
+	}
+}

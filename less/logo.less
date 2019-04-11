@@ -1,0 +1,27 @@
+@import "variables.less";
+
+.logo__image {
+	width: 33px;
+	height: 38px;
+	background-image: url("../img/logo-mobile.png");
+	background-position: center center;
+}	
+
+@media (min-width: @tablet-width) {
+	.logo__image {
+		width: 173px;
+		height: 58px;
+		background-image: url("../img/logo-tablet.png");
+	}
+	.logo__header {
+		display: none;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.logo__image {
+		width: 203px;
+		height: 59px;
+		background-image: url("../img/logo-desktop.png");
+	}
+}

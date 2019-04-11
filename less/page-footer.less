@@ -1,0 +1,62 @@
+@import "variables.less";
+
+.page-footer {
+	padding: 0 20px;
+	background-color: #f2f2f2;
+	&__logo {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__social {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__copyright {
+		margin-top: 50px;
+	}
+
+}
+
+@media (min-width: @tablet-width) {
+	.page-footer {
+		display: 	flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 30px;
+		
+		&__logo {
+			width: 192px;
+		}
+
+		&__social {
+			width: 324px;	
+		}
+
+		&__copyright {
+			width: 192px;	
+			margin-top: 20px;	
+		}
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.page-footer {
+		padding: 0 40px;
+
+		&__logo {
+			width: 192px;
+		}
+
+		&__social {
+			width: 324px;	
+		}
+
+		&__copyright {
+			width: 192px;	
+			margin-top: 20px;	
+		}
+	}
+}

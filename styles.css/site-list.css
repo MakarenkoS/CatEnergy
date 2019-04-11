@@ -1,0 +1,36 @@
+.site-list {
+  margin: 0 auto;
+  width: 320px;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+}
+.site-list__item {
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.site-list__item--active {
+  border-bottom: 2px solid green;
+  /*Переделвать*/
+}
+.site-list__link {
+  text-decoration: none;
+  color: #222222;
+}
+.site-list__link:hover {
+  opacity: 0.6;
+}
+.site-list__link:focus {
+  opacity: 0.3;
+}
+@media (min-width: 768px) {
+  .site-list {
+    width: 520px;
+    flex-direction: row;
+  }
+}

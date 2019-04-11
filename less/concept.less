@@ -1,0 +1,103 @@
+@import "variables.less";
+
+.concept {
+	padding: 0 20px;
+
+	&__header {
+		font-size: 36px;	
+		line-height: 60px;	
+		font-weight: 400;	
+	}
+	
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+	  padding-left: 80px;
+	  margin-top: 20px;
+	}
+
+	&__link {
+  	color: #444;
+	  text-decoration: none;
+	  position: relative;
+
+		&::before {
+			position: absolute;
+			content: "";
+			left: -80px;
+			top: 0;
+
+			width: 60px;
+			height: 60px;
+			background-color: #68b738;
+		};
+
+		&::after {
+			position: absolute;
+			content: "";
+			width: 30px;
+			height: 30px;
+			left: -62px;
+			top: 15px;
+			display: flex;
+			vertical-align: middle;
+			background-repeat: no-repeat;
+			background-image: url("../img/advantage-1.png");
+		};
+		&.concept__link--2::after {
+		  background-image: url("../img/advantage-2.png");
+		}
+		&.concept__link--3::after {
+		  background-image: url("../img/advantage-3.png");
+		}
+		&.concept__link--4::after {
+		  background-image: url("../img/advantage-4.png");
+		}
+	}
+
+}
+
+@media (min-width: @tablet-width) {
+	.concept {
+		padding: 0 30px;
+		&__header {
+			font-size: 	60px;
+			font-weight: 400;	
+		}
+		&__list {
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+		&__item {
+			width: 354px;
+		}
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.concept {
+		padding: 0 40px;
+		max-width: 1300px;
+		margin: 0 auto;
+		&__list{
+			flex-wrap: nowrap;
+			width: 1220px;
+		}
+		&__columns--wrapper {
+			width: 610px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&__item {
+			width: 305px;
+		}
+	}
+}
