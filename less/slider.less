@@ -7,29 +7,49 @@
 		width: 280px;
 		height: 240px;
 		margin: 0 auto;
-		background-image: url("../img/after-mobile.png"); 						
-		background-repeat: no-repeat;
-		background-position: center top;
 		position: relative;
+		&::before {
+			position: absolute;
+			content: "";
+			
+			width: 240px;
+			height: 240px;
+			top: 0;
+			left: 0;
+
+			background-image: url("../img/before-mobile.png"); 						
+			background-repeat: no-repeat;
+			background-position: center, top;
+
+			clip: rect(auto, 120px, auto, auto);
+			
+		}
 		&::after {
 			position: absolute;
 			content: "";
 
+			
 			width: 280px;
 			height: 240px;
-			right: 140px;
+			
 			top: 0;
-			background-image: url("../img/before-mobile.jpg");
+			
+			background-image: url("../img/after-mobile.png");
 			background-repeat: no-repeat;
-			background-position: 140px top;
-		};
+			background-position: center, top;
+
+			clip: rect(auto, auto, auto, 120px);
+		}
 	}
 
 	&__toggles-wrapper {
+		padding: 0 40px;
+		margin-top: 20px;
+		padding-bottom: 30px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 0 40px;
+
 	}
 
 	&__text {
@@ -53,6 +73,8 @@
 	}
 
 	&__bar {
+		position: absolute;
+		top:3px;
 		width: 30%;
 		margin: 0 6px;
 		content: "";
@@ -68,15 +90,35 @@
 @media(min-width: @tablet-width) {
 	.slider {
 		&__image{
-			width: 550px;
+			width: 680px;
 			height: 500px;
-			background-image: url("../img/after-desktop.png"); 
-			&::after {
-				width: 550px;
+
+
+			
+			&::before {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				width: 680px;
 				height: 500px;
-				right: 275px;
-				background-image: url("../img/before-desktop.jpg");
-				background-position: 275px top;
+				background-image: url("../img/before-desktop.png");
+				background-position: center top;
+				background-repeat: no-repeat;
+				clip: rect(auto, 350px, auto, auto);
+			}
+			&::after {
+				display: flex;
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				width: 680px;
+				height: 500px;
+				background-image: url("../img/after-desktop.png");
+				background-position: center top;
+				background-repeat: no-repeat;
+				clip: rect(auto, auto, auto, 350px);	
 			};
 		}
 		&__scale {
@@ -98,7 +140,7 @@
 			border: 2px solid #d8d8d8;
 			box-shadow: 0 0 3px 1px rgba(0,0,0,0.1);
 			left: 50%;
-			margin-left: -17px;
+			margin-left: 200px;
 			top: -10px;
 			background-color: #fff;
 			&::after {

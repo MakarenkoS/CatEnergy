@@ -4,6 +4,7 @@
 	position: relative;
 	background-color: #f2f2f2;
 	margin-top:23px;
+	padding: 0 20px;
 
 	&__caption {
 		margin: 0;
@@ -13,9 +14,14 @@
 		line-height: 37px;
 		text-transform: uppercase;
 		margin-left: 90px;
+		padding-top: 35px;
 	}
 	&__description {
 		position: relative;
+		color: #444444;
+		padding-top: 20px;
+		padding-bottom: 50px;
+
 		&::after {
 		position: absolute;
 		content: "";
@@ -25,18 +31,21 @@
 		bottom: -10px;
 		left: 5%;
 		margin: 0 auto;
-		};
+		}
 	}
 	&__link {
+		display: block;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: #111;
 		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;
 
 		&::after {
 			position: absolute;
 			left: 110px;
-			top: 7px;
+			top: 15px;
 
 			content: "";
 			width: 25px;
@@ -54,6 +63,7 @@
 		border-radius: 50%;
 		background-color: #68b738;
 		left: 22px;
+		top: 40px;
 	};
 	
 	&::after {
@@ -64,14 +74,14 @@
 		background-repeat: no-repeat;
 		background-image: url("../img/cat-slim.png");
 		left: 30px;
-		top: -3px;
+		top: 30px;
 	};
 	&.option--grow::after {
 		width: 68px;
 		height: 28px;
 		background-image: url("../img/cat-grow.png");
 		left: 10px;
-		top: 12px;
+		top: 42px;
 	}
 }
 
@@ -85,6 +95,9 @@
 			}
 			&__description {
 				width: 400px;
+			}
+			&__link {
+				padding-bottom: 50px;
 			}
 			&::before {
 				width: 200px;
@@ -121,7 +134,7 @@
 @media(min-width: @desktop-width) {
 	.option {
 		width: 570px;
-
+		padding-top: 70px;
 		&__caption {
 			margin-left: 0;
 			font-size: 36px;
@@ -129,23 +142,42 @@
 			font-weight: 400;
 			text-align: center;
 	}
+
+		&__description {
+			padding: 0;
+			margin: 0;
+			width: auto;
+			padding-left: 30px;
+			padding-right: 50px;
+			margin-top: 80px;
+		}
+		
+		&__link {
+			margin-top: 40px;
+			padding-left: 30px;
+			&::after {
+				left: 140px;
+			}
+		}
 		&::before {
 			width: 100px;
 			height: 100px;
 			left: 53px;
+			top: 75px;
 	}
 
 		&::after {
 			width: 70px;
 			height: 97px;
 			left: 70px;
+			top: 70px;
 			background-image: url("../img/cat-slim100.png");
 	}
 	  &.option--grow::after {
 			width: 134px;
 			height: 56px;
 			background-image: url("../img/cat-grow100.png");
-			top: 25px;
+			top: 95px;
 			left: 30px;
 	  }
 	}

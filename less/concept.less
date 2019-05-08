@@ -2,8 +2,12 @@
 
 .concept {
 	padding: 0 20px;
+	margin-top: 20px;
 
 	&__header {
+		margin: 0;
+		padding: 0;
+
 		font-size: 36px;	
 		line-height: 60px;	
 		font-weight: 400;	
@@ -12,17 +16,20 @@
 	&__list {
 		margin: 0;
 		padding: 0;
-		list-style: none;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__item {
-	  padding-left: 80px;
-	  margin-top: 20px;
+		min-height: 60px;
+	  
 	}
 
 	&__link {
+		display: block;
+		padding-left: 80px;
+	  margin-top: 20px;
   	color: #444;
 	  text-decoration: none;
 	  position: relative;
@@ -30,7 +37,7 @@
 		&::before {
 			position: absolute;
 			content: "";
-			left: -80px;
+			left: 0px;
 			top: 0;
 
 			width: 60px;
@@ -43,7 +50,7 @@
 			content: "";
 			width: 30px;
 			height: 30px;
-			left: -62px;
+			left: 15px;
 			top: 15px;
 			display: flex;
 			vertical-align: middle;
@@ -66,17 +73,47 @@
 @media (min-width: @tablet-width) {
 	.concept {
 		padding: 0 30px;
+
 		&__header {
 			font-size: 	60px;
 			font-weight: 400;	
 		}
 		&__list {
+			
+			margin-top: 50px;
 			flex-direction: row;
-			justify-content: space-around;
+			justify-content: space-between;
 			flex-wrap: wrap;
+			width: 620px;
+
 		}
 		&__item {
-			width: 354px;
+			width: 240px;
+			min-height: 235px;
+			background-image: url("../img/1.png");
+			background-repeat: no-repeat;
+			background-position: 110px bottom;
+			&--2 {
+				background-image: url("../img/2.png");
+			}
+			&--3 {
+				background-image: url("../img/3.png");
+			}
+			&--4 {
+				background-image: url("../img/4.png");
+			}
+		}
+
+		&__link {
+			padding: 0;
+			padding-top: 80px;
+		}
+		&__columns--wrapper {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 80px;	
 		}
 	}
 }
@@ -91,13 +128,15 @@
 			width: 1220px;
 		}
 		&__columns--wrapper {
-			width: 610px;
+			width: 570px;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 		}
 		&__item {
-			width: 305px;
+			width: 245px;
+			padding-right: 30px;	
+			/*background-image: none;*/
 		}
 	}
 }

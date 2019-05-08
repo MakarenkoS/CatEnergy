@@ -13,8 +13,6 @@
 }
 
 
-
-
 .main-navigation--closed .site-list {
 	display: none;
 }
@@ -45,13 +43,20 @@
 @media(min-width: @tablet-width) {
 	.main-navigation {
 		margin: 0;
+		width: 516px;
 		&__toggle {
 		display: none;
 		}
 		& .site-list {
 			display: flex;
+			flex-direction: row;
 			justify-content: space-between;
 		}
 	}
+}
 
+@media(min-width: @desktop-width) {
+	.main-navigation {
+		width: 610px;
+	}
 }

@@ -6,6 +6,7 @@
 	border: none;
 	margin: 0;
 	padding: 0;
+	border: collapse;
 	&__row{
 		width: 280px;
 		display: flex;
@@ -21,16 +22,24 @@
 		font-size: 24px;	
 		line-height: 24px;
 		text-transform: uppercase;
+		border: 1px solid #cfcfcf;
+		border-radius: 5%;
+		/*border-bottom: none;*/
+		/*border-image: linear-gradient(to bottom, #ff0000 0%, #ff0000 90%, #0000ff 90%, #0000ff 100%) 0 50% 50% 100% ;*/
+		/*border-image-slice:10;*/
+		/*background-image: url("../img/weight back.png");*/
 	}
 
 	&__data {
-		width: 125px;
+		width: 87px;
 		font-family: "Arial",sans-serif;
 		font-size: 12px;
 		line-height: 12px;
 		color: #444444;
 		margin: 0 auto;
 		text-align: center;
+		margin-top: -10px;
+		background-color: #f2f2f2;
 	}
 }
 
@@ -38,6 +47,9 @@
 @media (min-width:  @tablet-width) {
 	.table {
 		margin-right: auto;
+		&__data {
+			background-color: #fff;
+		}
 	}
 }
 
@@ -45,6 +57,9 @@
 	.table {	
 		&__row {
 			width: 360px;
+		}
+		&__value {
+			border: none;
 		}
 	}
 }

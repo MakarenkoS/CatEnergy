@@ -4,10 +4,12 @@
 .example {
 	padding: 0 20px;
 	background-color: #f2f2f2;
+	margin-top: 40px;	
 
 	&__header {
 		margin: 0;	
 		padding: 0;	
+		padding-top: 20px;	
 		font-size: 36px;	
 		line-height: 60px;	
 	}	
@@ -18,33 +20,46 @@
 		line-height: 18px;	
 		color: #444444;
 		font-family: "Arial", sans-serif;
+		margin-top: 30px;	
 	}
 	&__table {
+
 		width: 280px;
 		margin: 0 auto;
+		&--wrapper {
+			margin-top: 20px;	
+		}
 	}
 
 	&__cost {
 		display: block;
 		margin: 0;
 		padding: 0;
+		margin-top: 20px;
 		text-align: center;	
 		color: #111111;
 		font-size: 14px;
 		line-height: 20px;
 		text-transform: uppercase;	
 	}
+
+	&__slider {
+		margin-top: 20px;
+	}
 }
 
 @media(min-width: @tablet-width) {
 	.example {
 		padding: 0 30px;
+		background-color: #fff;
 		&__table {
 			width: 384px;
 			margin-left: 0;
 		}
 		&__cost {
 			width: 200px;
+			font-size: 20px;
+			line-height: 20px;
 		}
 		&__table--wrapper {
 			display: flex;
