@@ -1,20 +1,30 @@
 @import "variables.less";
 
 .location {
-	padding: 0 20px;
+	
 	&__info {
+
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		padding: 0 20px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background-color: #fff;
+	}
+
+	&__inner-page .location__info {
+		background-color: #f2f2f2;
+
 	}
 	&__offer {
 		margin: 0;
 		padding: 0;
 		text-transform: uppercase;
-		font-size: 20px;
-		line-height: 25px;
+		font-size: 16px;
+		line-height: 20px;
 		color: #111111;
-		width: 200px;
+		width: 140px;
 		font-family: "Oswald";
 	}
 	&__address {
@@ -22,9 +32,9 @@
 		padding: 0;
 		color: #444444;
 		font-family: "Arial", sans-serif;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 20px;
-		width: 200px;
+		width: 140px;
 	}
 
 	&__map {
@@ -50,15 +60,26 @@
 
 @media(min-width: @tablet-width) {
 	.location {
-		padding: 0 30px;
+		/*padding: 0 30px;*/
+		margin-top: 68px;
+		&__info {
+			padding: 60px 73px;
+		}
+		&__offer {
+			width: 200px;
+			font-size: 20px;
+			line-height: 25px;
+		}
+
+		&__address {
+			width: 200px;
+			font-size: 16px;
+			line-height: 20px;
+		}
 		&__map{
-			&--image{
-				display: block;	
-				box-sizing: border-box;
-				background: url("../img/map-tablet.jpg") no-repeat;
+			&--image {
 				width: 767px;
-				height: 400px;
-				padding-left: 767px;
+			  height: 400px;
 			}
 			&::after {
 				width: 110px;
@@ -66,7 +87,7 @@
 				background-image: url("../img/map-pin.png");
 				margin-left: -54px;
 				margin-top: -52px;
-			};
+			}
 		}
 		&__address {
 			&--city {
@@ -79,17 +100,22 @@
 
 @media(min-width: @desktop-width) {
 	.location {
-		padding: 0 40px;
-		margin-top: 200px;
+		/*padding: 0 40px;*/
+		margin-top: 100px;
+		padding-top: 200px;
+		background-color: #f2f2f2;
 		&__info {
 			position: relative;
-			flex-direction: column;
+			flex-direction: row;
+			padding: 66px 77px;
 			width: 570px;
-			margin-bottom: -300px;
+			margin-left: 110px;
+			margin-bottom: -302px;
 			z-index: 2;
 			background-color: #fff;
 		}
 		&__map{
+			margin-top: 0;
 			&--image{
 				background: url("../img/map-desktop.jpg") no-repeat;
 				width: 1440px;

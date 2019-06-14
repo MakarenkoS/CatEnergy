@@ -93,9 +93,10 @@
 
 @media (min-width: @desktop-width) {
 	.site-list {
+		position: relative;
+		z-index: 5;
 		&__link {
 			color: #fff;
-			
 		}
 		&__item {
 			color: #fff;
@@ -108,4 +109,17 @@
 			}
 		}
 	}
+	.site-list--inner-page .site-list{
+		 &__link {
+			color: #000;
+		 }
+		 &__item {
+		 	color: #000;
+
+		 	&--active::after {
+		 		background-color: #68b738;
+		  }
+	  } 
+	}
+
 }

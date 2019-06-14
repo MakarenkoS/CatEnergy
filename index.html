@@ -10,15 +10,18 @@
 	<link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-
 	<header class="page-header">
-	
-			<div class="page-header__wrapper">
-		
-				<div class="logo__image"></div>
-				<img src="img/logo-mobile-header.png" alt="Текстовый логотип" width="101" height="19" class="logo__header">
-				</a>
-			</div>
+		<div class="page-header__logo logo">
+			<a class="logo__link" href="#">
+				<picture>
+							<source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+							<source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+							<img src="img/logo-mobile.svg" alt="Логотип" width="34" height="38" class="logo__image">
+				</picture>
+				
+				<img src="img/logo-mobile-header.svg" alt="Текстовый логотип" width="101" height="19" class="logo__header">
+			</a>
+		</div>
 			<nav class="main-navigation main-navigation--closed main-navigation--nojs">
 					<button class="main-navigation__toggle button-toggle">
 					<span class="visually-hidden">Открыть меню</span>
@@ -132,7 +135,7 @@
 					<p class="slider__text slider__text--before">Было</p>
 					<div class="slider__scale">
 						<div class="slider__bar">
-							<div class="slider__toggle">
+							<div tabindex="0" class="slider__toggle">
 							</div>
 						</div>
 					</div>
@@ -143,7 +146,7 @@
 
 		<section class="location">
 			<h2 class="visually-hidden">Карта проезда</h2>
-
+			
 			<div class="location__info">
 				<p class="location__offer">
 					Приглашаем к сотрудничеству дилеров!
@@ -174,22 +177,34 @@
 						<span class="visually-hidden">
 							В контакте
 						</span>
+						<svg class="icon-vk--small" width="22" height="12" viewbox = "0 0 22 12"><use xlink:href="img/sprite.svg#m-vk"></use>
+						</svg>
 					</a> 
 				</li>
+
 				<li class="social__item">
 					<a href="" class="social__link social__link--instagram">
 						<span class="visually-hidden">
-							Инстаграм
+							Фейсбук
 						</span>
+						<svg class="icon-insta--small" width="16" height="16" viewbox = "0 0 16 16"><use xlink:href="img/sprite.svg#m-insta"></use>
+						</svg>
 					</a> 
 				</li>
+
 				<li class="social__item">
 					<a href="" class="social__link social__link--facebook">
 						<span class="visually-hidden">
-							Фейсбук
+							Инстаграм
 						</span>
+						<svg  class="icon-fb--small" width="10" height="19">
+						<include width="10" src = "dest/img/m-fb.svg"></include>
+						</svg>
+						<!-- <svg class="icon-fb--small" width="10" height="19" viewbox = "0 0 10 19"><use xlink:href="img/sprite.svg#m-fb"></use>
+						</svg> -->
 					</a> 
 				</li>
+			
 			</ul>
 		</div>
 
@@ -199,7 +214,10 @@
 			</b>
 			<a href="" class="copyright__link">
 				HTML Academy
+				<svg class="icon-html-logo" width="27" height="35"><use xlink:href="iconssprite.svg#icon-html-logo"></use>
+				</svg>
 			</a>
+
 		</div>
 	</footer>
 </body>
