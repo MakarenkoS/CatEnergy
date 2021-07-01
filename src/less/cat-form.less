@@ -1,0 +1,168 @@
+@import "variables.less";
+
+.cat-form {
+	padding: 0;
+	margin: 0;
+	&__field-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;	
+		margin-top: 15px;
+	}
+	&__label {
+    display: block;
+    padding-bottom: 20px;
+    position: relative; 
+		color: #111;
+		font-size: 16px;	
+		line-height: 18px;	
+		text-transform: uppercase;
+		&--weight {
+			width: 70px;
+		}	
+		&--age {
+			width: 100px;
+		}
+  }
+  
+  &__radio-group {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+	&__wrapper--options {
+		position: relative;
+		margin-top: 50px;
+		&::after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 1px;
+			background-color: #ededed;
+			left: 0;
+			top: -25px;
+		};
+		&::before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 1px;
+			background-color: #ededed;
+			left: 0;
+			bottom: -25px;
+		};
+  }
+  
+  &__radio {
+    display: none;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  &__radio-indicator {
+  	position: absolute;
+  	content: "";
+  	width: 30px;
+  	height: 30px;
+  	border: 1px solid #d1d1d1;
+  	border-radius: 50%;
+  	left: -40px;
+  	top: -5px;
+  }
+
+  &__radio:checked + .cat-form__radio-indicator::before {
+		position: absolute;
+		content: "";
+		width: 12px;
+		height: 12px;
+		background-color: #68b738;
+		border-radius: 50%;
+		left: 8px;
+		top: 8px;
+  }
+
+   &__radio:checked:hover + .cat-form__radio-indicator::before{
+		background-color: green;
+	}
+
+	&__radio:active + .cat-form__radio-indicator{
+		opacity: 0.3;
+	}
+	
+	&__input {
+		border: 1px solid #e7e7e7;
+		padding: 14px 16px;
+		width: 88%;
+		&--weight {
+			width: 83%;
+		}
+		&--age {
+			width: 78%;
+		}
+		&:focus {
+			border-color: #444444;
+		};
+	}
+
+	&__option {
+		padding: 0;
+		margin: 0;
+		margin-top: 25px;
+		padding-left: 45px;
+		position: relative;
+	}
+}
+
+@media (min-width: @tablet-width) {
+	.cat-form {
+
+    &__radio {
+      left: -40px;
+      top: -5px;
+    }
+
+    &__label {
+      display: inline-block;
+      padding-left: 20px;
+    }
+
+    &__radio-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+		&__wrapper--options {
+			border: 1px solid #ededed;
+			padding: 20px 40px 40px 40px;
+			&::after {
+				display: none;
+			};
+			&::before {
+				display: none;
+			};
+		}
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.cat-form {
+		&__wrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&--options {
+				width: 570px;
+				margin-top: 13px;
+			}
+			&--info {
+				width: 570px;
+			}
+		}
+	}
+}

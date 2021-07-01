@@ -1,0 +1,94 @@
+@import "variables.less";
+
+.comments-form {
+	margin: 0;
+	padding: 0;
+	margin-top: 35px;
+
+	&__caption  {
+		font-size: 24px;
+	  line-height: 24px;
+		position: relative;
+	  display: flex;
+	  flex-direction: row;
+	  color: #111111;
+	  justify-content: space-between;
+		&--text {
+		  margin: 0;
+		  padding: 0;
+		  font-size: 24px;
+		  line-height: 24px;
+		  width: 140px;
+		  flex-shrink: 0;
+	  }
+	  &::after {
+	  	content: "";
+	  	position: absolute;
+	  	right: -100px;
+	  	top: -10px;
+	  	width: 50%;
+	  	height: 50px;
+	  	overflow: hidden;
+			background: linear-gradient(to bottom, white 0%, white 49%, green 49%, green 55%, white 55%);
+	  }
+	}
+
+	&__text {
+		margin-top: 35px;
+		font-family: "Oswald";
+		font-size: 16px;
+		line-height: 18px;
+		width: 100%;
+		height: 150px;
+		text-transform: uppercase;
+		text-align: left;
+		padding-left: 10px;
+		&:focus {
+			border-color: #444444;
+		};
+	}
+}
+
+@media (min-width: @tablet-width) {
+	.comments-form {
+		margin-top: 70px;
+		&__caption {
+			&--text {
+				font-size: 36px;
+				line-height: 36px;
+				width: 200px;
+		  }
+			&::before {
+		    content: "";
+  	    position: absolute;
+  		  left: -80px;
+  	    top: -5px;
+  	    width: 25%;
+  	    height: 50px;
+  	    overflow: hidden;
+		    background: linear-gradient(to bottom, white 0%, white 49%, green 49%, green 55%, white 55%);
+	    }
+
+	    &::after {
+	    	top: -5px;
+		  	width: auto;
+		  	width: 490px;
+		  	left: 200px;
+	    };
+		}
+
+		&__text {
+			margin-top: 70px;
+		}
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.comments-form {
+		&__caption {
+			&::after {
+				width: 1090px;
+			}
+		}
+	}
+}

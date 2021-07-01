@@ -1,0 +1,63 @@
+
+@import "variables.less";
+
+.question-form {
+	&__cat{
+	border: none;
+  }
+
+  &__owner {
+    margin-top: 60px; 
+  	border: none;
+  }
+  &__comments {
+  	border: none;
+  }
+  &__additional {
+  	border: none;
+  }
+
+  &__button {
+    margin-top: 35px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__notes {
+    font-size: 14px;
+    line-height: 16px;
+    color: #444444;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .question-form {
+    &__button {
+      width: 282px; 
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+    &__notes {
+    font-size: 16px;
+    margin-left: 60px;
+    }
+
+    & textarea {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .question-form {
+    &__button {
+      width: 570px; 
+    }
+    &__notes {
+    font-size: 16px;
+    margin-left: 80px;
+    }
+  }
+}
